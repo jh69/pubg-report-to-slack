@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  pubg-report-to-slack:
+    build: ./
+    command: python app.py
+    env_file: settings.env
+    volumes:
+      - .:/code
+    tty: true
